@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <dirent.h>
 #include <string.h>
@@ -94,7 +95,7 @@ void viewrecord()
     char * recordList[20];
     char * recordToView = NULL;
     int i = 0;
-    int recordChoice;
+    int menuChoice;
 
     struct dirent * de;
     DIR *dr = opendir("./records");
@@ -103,6 +104,9 @@ void viewrecord()
 	    puts("MISSING \"records\" DIRECTORY");
 	    return;
 	}
+
+    FILE * record;
+    char fileChar;
 
     puts("\n\t\t***************************");
     puts("\t\t*CURRENT AVAILABLE RECORDS*");
@@ -117,12 +121,13 @@ void viewrecord()
 		    printf("\t%i. %s\n", i, de->d_name);
 		}
 	}
+
     closedir(dr);
 
     printf("\tCHOOSE A RECORD TO VIEW:");
-    scanf("%i", &recordChoice);
+    scanf("%i", &menuChoice);
 
-    switch(recordChoice)
+    switch(menuChoice)
 	{
 	case 1:
 	    if(recordList[0] == NULL)
@@ -295,4 +300,31 @@ void viewrecord()
     puts("\t2.RECORD OF FIX TIME.\n");
     printf("\t\tENTER YOUR CHOICE:");
 
+    scanf("%i", &menuChoice);
+
+    switch(menuChoice)
+	{
+	case 1:
+	    record = fopen(recordToView, "r");
+
+	    if(record == NULL)
+		{
+		    puts("\nRECORD NOT FOUND... RETURNING TO MAIN MENU\n");
+		    return;
+		}
+
+	    do{
+		fileChar = fgetc(record);
+		printf("%c", fileChar);
+	    }while(fileChar != EOF);
+
+	    fclose(record);
+	    break;
+	case 2:
+
+	    break;
+	default:
+	    puts("\nINVALID CHOICE... RETURNING TO MAIN MENU\n");
+	    return;
+	}
 }
