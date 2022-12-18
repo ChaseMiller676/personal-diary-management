@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int password();
+void addrecord();
+void viewrecord();
+void editrecord();
+void editpassword();
+void deleterecord();
+/*
+  I do not understand this language.
+*/
+int main(void)
+{
+    int menuChoice = 0;
+
+    while(true)
+	{
+	    puts("\t***********************************");
+	    puts("\t*PASSWORD PROTECTED PERSONAL DIARY*");
+	    puts("\t***********************************");
+	    puts("\n\t\tMAIN MENU");
+	    puts("\n\tADD RECORD\t[1]");
+	    puts("\tVIEW RECORD\t[2]");
+	    puts("\tEDIT RECORD\t[3]");
+	    puts("\tDELETE RECORD\t[4]");
+	    puts("\tEDIT PASSWORD\t[5]");
+	    puts("\tEXIT\t\t[6]");
+	    printf("\n\tENTER YOUR CHOICE:");
+
+	    scanf("%i", &menuChoice);
+	    switch(menuChoice)
+		{
+		case 1:
+		    addrecord();
+		    break;
+
+		}
+	}
+}
+
+void addrecord()
+{
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    int hours = 0;
+    int minutes = 0;
+    char name[20];
+    char place[20];
+    char duration[5];
+    char note[150];
+    char yesno;
+
+    puts("\t\t*************************");
+    puts("\t\t*WELCOME TO THE ADD MENU*");
+    puts("\t\t*************************\n");
+    printf("\n\tENTER DATE OF YOUR RECORD:[yyyy-mm-dd]:");
+    scanf("%i-%i-%i", &year, &month, &day);
+    printf("\n\tENTER TIME:[hh:mm]:");
+    scanf("%i:%i", &hours, &minutes);
+    printf("\tENTER NAME:");
+    scanf("%s", name);
+    printf("\tENTER PLACE:");
+    scanf("%s", place);
+    printf("\tENTER DURATION:");
+    scanf("%s", duration);
+    printf("\tNOTE:");
+    scanf("%s", note);
+    puts("\nYOUR RECORD IS ADDED...");
+    printf("\tADD ANOTHER RECORD...<Y/N>:");
+    scanf("%c", &yesno);
+
+    switch(yesno)
+	{
+	case 'y':
+	case 'Y':
+	    addrecord();
+	    break;
+	case 'n':
+	case 'N':
+	    break;
+	}
+}
