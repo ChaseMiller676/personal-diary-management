@@ -131,6 +131,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[0];
+	    break;
 	case 2:
 	    if(recordList[1] == NULL)
 		{
@@ -138,6 +139,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[1];
+	    break;
 	case 3:
 	    if(recordList[2] == NULL)
 		{
@@ -145,6 +147,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[2];
+	    break;
 	case 4:
 	    if(recordList[3] == NULL)
 		{
@@ -152,6 +155,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[3];
+	    break;
 	case 5:
 	    if(recordList[4] == NULL)
 		{
@@ -159,6 +163,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[4];
+	    break;
 	case 6:
 	    if(recordList[5] == NULL)
 		{
@@ -166,6 +171,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[5];
+	    break;
 	case 7:
 	    if(recordList[6] == NULL)
 		{
@@ -173,6 +179,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[6];
+	    break;
 	case 8:
 	    if(recordList[7] == NULL)
 		{
@@ -180,6 +187,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[7];
+	    break;
 	case 9:
 	    if(recordList[8] == NULL)
 		{
@@ -187,6 +195,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[8];
+	    break;
 	case 10:
 	    if(recordList[9] == NULL)
 		{
@@ -194,6 +203,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[9];
+	    break;
 	case 11:
 	    if(recordList[10] == NULL)
 		{
@@ -201,6 +211,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[10];
+	    break;
 	case 12:
 	    if(recordList[11] == NULL)
 		{
@@ -208,6 +219,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[11];
+	    break;
 	case 13:
 	    if(recordList[12] == NULL)
 		{
@@ -215,6 +227,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[12];
+	    break;
 	case 14:
 	    if(recordList[13] == NULL)
 		{
@@ -222,6 +235,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[13];
+	    break;
 	case 15:
 	    if(recordList[14] == NULL)
 		{
@@ -229,6 +243,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[14];
+	    break;
 	case 16:
 	    if(recordList[15] == NULL)
 		{
@@ -236,6 +251,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[15];
+	    break;
 	case 17:
 	    if(recordList[16] == NULL)
 		{
@@ -243,6 +259,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[16];
+	    break;
 	case 18:
 	    if(recordList[17] == NULL)
 		{
@@ -250,6 +267,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[17];
+	    break;
 	case 19:
 	    if(recordList[18] == NULL)
 		{
@@ -257,6 +275,7 @@ void viewrecord()
 		    break;
 		}
 	    recordToView = recordList[18];
+	    break;
 	case 20:
 	    if(recordList[19] == NULL)
 		{
